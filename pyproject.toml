@@ -1,0 +1,39 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+
+requires = [
+  "setuptools",
+]
+
+
+[project]
+description = "Temporary solution to use the reference tokenizer while tokenizer broken in llama.cpp."
+name = "llamacpp_retokenizer"
+version = "1.0.0"
+readme = "README.md"
+
+authors = [
+  { name = "sasha0552", email = "admin@sasha0552.org" },
+]
+
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+  "flask",
+  "requests",
+  "transformers",
+]
+
+license = { text = "MIT" }
+
+
+[project.scripts]
+retokenizer = "llamacpp_retokenizer.scripts.retokenizer:main"
+
+
+[project.urls]
+Homepage = "https://github.com/sasha0552/llamacpp-retokenizer"
